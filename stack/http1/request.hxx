@@ -18,7 +18,7 @@ class Request {
       friend class SessionManager;
 
    public :
-      Request(const char *httpstr, const uint32_t strlen);
+      Request(const char *httpstr, const uint32_t strlen, const char *scheme = "http");
       Request(const char *url, xi::h1::method::e method = xi::h1::method::GET);
       Request(xi::h1::method::e method, const char *scheme, const char *path, const char *authority);
       ~Request();
